@@ -1,6 +1,8 @@
 # n8n-nodes-moorcheh
 
-This is an n8n community node. It lets you use Moorcheh Vector Store API in your n8n workflows.
+![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+
+This is an [n8n](https://n8n.io/) Official node interfacing with [Moorcheh](https://moorcheh.ai).
 
 Moorcheh is a powerful vector store and AI platform that enables semantic search, document storage, and AI-powered question answering across your data.
 
@@ -20,24 +22,24 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 ## Operations
 
 ### Namespace Operations
-- **Create**: Create a new namespace for storing documents or vectors
-- **List**: List all available namespaces
-- **Delete**: Delete a namespace and all its contents
+- **[Create](https://console.moorcheh.ai/docs/create-namespace/api-call)**: Create a new namespace for storing documents or vectors
+- **[List](https://console.moorcheh.ai/docs/list-namespaces/api-call)**: List all available namespaces
+- **[Delete](https://console.moorcheh.ai/docs/delete-namespace/api-call)**: Delete a namespace and all its contents
 
 ### Document Operations
-- **Upload**: Upload documents to a namespace for semantic search
-- **Get**: Retrieve specific documents by their IDs
-- **Delete**: Delete documents from a namespace
+- **[Upload](https://console.moorcheh.ai/docs/upload-text-data/api-call)**: Upload documents to a namespace for semantic search
+- **[Get](https://console.moorcheh.ai/docs/get-documents/api-call)**: Retrieve specific documents by their IDs
+- **[Delete](https://console.moorcheh.ai/docs/delete-data/api-call)**: Delete documents from a namespace
 
 ### Vector Operations
-- **Upload**: Upload vector embeddings to a namespace
-- **Delete**: Delete vectors from a namespace
+- **[Upload](https://console.moorcheh.ai/docs/upload-vector-data/api-call)**: Upload vector embeddings to a namespace
+- **[Delete](https://console.moorcheh.ai/docs/delete-data/api-call)**: Delete vectors from a namespace
 
 ### Search Operations
-- **Search**: Perform semantic search across namespaces using text queries or vector embeddings
+- **[Search](https://console.moorcheh.ai/docs/search/api-call)**: Perform semantic search across namespaces using text queries or vector embeddings
 
 ### Answer Operations
-- **Generate**: Generate AI-powered answers based on namespace content using various LLM models
+- **[Generate](https://console.moorcheh.ai/docs/gen-ai-answer/api-call)**: Generate AI-powered answers based on namespace content using various LLM models
 
 ## Credentials
 
