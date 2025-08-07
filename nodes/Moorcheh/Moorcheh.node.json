@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-base.Moorcheh",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Miscellaneous"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://console.moorcheh.ai/docs"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://console.moorcheh.ai/docs"
+			}
+		]
+	}
+} 
