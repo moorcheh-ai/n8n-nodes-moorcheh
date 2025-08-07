@@ -105,7 +105,7 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 		displayName: 'Threshold',
 		name: 'threshold',
 		type: 'number',
-		default: 0.7,
+		default: 0.2,
 		displayOptions: {
 			show: {
 				resource: ['answer'],
