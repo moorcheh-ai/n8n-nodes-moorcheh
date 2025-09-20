@@ -1,4 +1,4 @@
-import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
+import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 import { namespaceOperations } from './description/namespace';
 import { documentOperations } from './description/document';
 import { vectorOperations } from './description/vector';
@@ -17,8 +17,8 @@ export class Moorcheh implements INodeType {
 		defaults: {
 			name: 'Moorcheh',
 		},
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: ['main'],
+		outputs: ['main'],
 		credentials: [
 			{
 				name: 'moorchehApi',
@@ -70,4 +70,4 @@ export class Moorcheh implements INodeType {
 			...answerOperations,
 		],
 	};
-} 
+}
