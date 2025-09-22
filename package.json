@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-moorcheh",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official n8n nodes for integrating Moorcheh - https://moorcheh.ai",
   "keywords": [
     "n8n-community-node-package"
@@ -49,5 +49,8 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "overrides": {
+    "form-data": "4.0.4"
   }
 }
