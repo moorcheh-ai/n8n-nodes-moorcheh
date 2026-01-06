@@ -146,27 +146,39 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 		type: 'options',
 		options: [
 			{
-				name: 'Claude 3.7 Sonnet',
-				value: 'anthropic.claude-3-7-sonnet-20250219-v1:0',
-			},
-			{
 				name: 'Claude Sonnet 4',
 				value: 'anthropic.claude-sonnet-4-20250514-v1:0',
 			},
 			{
-				name: 'DeepSeek R1',
-				value: 'deepseek.r1-v1:0',
+				name: 'Claude Sonnet 4.5',
+				value: 'anthropic.claude-sonnet-4-5-20250929-v1:0',
+			},
+			{
+				name: 'Llama 4 Maverick 17B',
+				value: 'meta.llama4-maverick-17b-instruct-v1:0',
 			},
 			{
 				name: 'Llama 3.3 70B',
 				value: 'meta.llama3-3-70b-instruct-v1:0',
 			},
 			{
-				name: 'Llama 4 Maverick',
-				value: 'meta.llama4-maverick-17b-instruct-v1:0',
+				name: 'Amazon Nova Pro',
+				value: 'amazon.nova-pro-v1:0',
+			},
+			{
+				name: 'DeepSeek R1',
+				value: 'deepseek.r1-v1:0',
+			},
+			{
+				name: 'OpenAI GPT OSS 120B',
+				value: 'openai.gpt-oss-120b-v1:0',
+			},
+			{
+				name: 'Qwen 3 32B',
+				value: 'qwen.qwen3-32b-v1:0',
 			},
 		],
-		default: 'anthropic.claude-3-7-sonnet-20250219-v1:0',
+		default: 'anthropic.claude-sonnet-4-20250514-v1:0',
 		displayOptions: {
 			show: {
 				resource: ['answer'],
@@ -290,4 +302,4 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 			},
 		},
 	},
-]; 
+];
