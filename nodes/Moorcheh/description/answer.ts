@@ -148,37 +148,58 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 			{
 				name: 'Amazon Nova Pro',
 				value: 'amazon.nova-pro-v1:0',
+				description:
+					'Amazon · 2 credits · Chat, math, and structured answers for AWS-style workloads',
 			},
 			{
-				name: 'Claude Sonnet 4',
-				value: 'anthropic.claude-sonnet-4-20250514-v1:0',
+				name: 'Claude Opus 4.6',
+				value: 'anthropic.claude-opus-4-6-v1',
+				description:
+					'Anthropic · 3 credits · Deepest reasoning and hardest tasks; pick when quality matters most (~1M context)',
 			},
 			{
-				name: 'Claude Sonnet 4.5',
-				value: 'anthropic.claude-sonnet-4-5-20250929-v1:0',
+				name: 'Claude Sonnet 4.6',
+				value: 'anthropic.claude-sonnet-4-6',
+				description:
+					'Anthropic · 3 credits · Fast flagship: coding, tools, long docs and RAG (~1M context)',
 			},
 			{
 				name: 'DeepSeek R1',
 				value: 'deepseek.r1-v1:0',
+				description:
+					'DeepSeek · 1 credit · Step-by-step reasoning; math, logic, and technical explanations',
 			},
 			{
-				name: 'Llama 3.3 70B',
-				value: 'meta.llama3-3-70b-instruct-v1:0',
+				name: 'DeepSeek V3.2',
+				value: 'deepseek.v3.2',
+				description:
+					'DeepSeek · 2 credits · Efficient general Q&A, multilingual, everyday RAG (~164K context)',
 			},
 			{
 				name: 'Llama 4 Maverick 17B',
 				value: 'meta.llama4-maverick-17b-instruct-v1:0',
+				description:
+					'Meta · 3 credits · Long context, summarization, function calling, fine-tuning friendly',
 			},
 			{
 				name: 'OpenAI GPT OSS 120B',
-				value: 'openai.gpt-oss-120b-v1:0',
+				value: 'openai.gpt-oss-120b-1:0',
+				description:
+					'OpenAI · 3 credits · Large generalist: research-style answers and long-form writing',
 			},
 			{
 				name: 'Qwen 3 32B',
 				value: 'qwen.qwen3-32b-v1:0',
+				description: 'Qwen · 2 credits · Code and bilingual (EN/ZH) tasks in a smaller footprint',
+			},
+			{
+				name: 'Qwen3 Next 80B A3B',
+				value: 'qwen.qwen3-next-80b-a3b',
+				description:
+					'Qwen · MoE model for long chats, docs, and code at scale (~256K context)',
 			},
 		],
-		default: 'anthropic.claude-sonnet-4-20250514-v1:0',
+		default: 'anthropic.claude-sonnet-4-6',
 		displayOptions: {
 			show: {
 				resource: ['answer'],
