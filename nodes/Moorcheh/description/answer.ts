@@ -33,15 +33,6 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 				operation: ['generate'],
 			},
 		},
-		routing: {
-			request: {
-				url: '/answer',
-				method: 'POST',
-				body: {
-					namespace: '={{$value}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Type',
@@ -52,13 +43,6 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['answer'],
 				operation: ['generate'],
-			},
-		},
-		routing: {
-			request: {
-				body: {
-					type: '={{$value}}',
-				},
 			},
 		},
 	},
@@ -74,13 +58,6 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 				operation: ['generate'],
 			},
 		},
-		routing: {
-			request: {
-				body: {
-					query: '={{$value}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Top K',
@@ -91,13 +68,6 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['answer'],
 				operation: ['generate'],
-			},
-		},
-		routing: {
-			request: {
-				body: {
-					top_k: '={{$value}}',
-				},
 			},
 		},
 	},
@@ -113,13 +83,6 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 				kioskMode: [true],
 			},
 		},
-		routing: {
-			request: {
-				body: {
-					threshold: '={{$value}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Kiosk Mode',
@@ -130,13 +93,6 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['answer'],
 				operation: ['generate'],
-			},
-		},
-		routing: {
-			request: {
-				body: {
-					kiosk_mode: '={{$value}}',
-				},
 			},
 		},
 	},
@@ -189,13 +145,6 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 				operation: ['generate'],
 			},
 		},
-		routing: {
-			request: {
-				body: {
-					ai_model: '={{$value}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Temperature',
@@ -206,13 +155,6 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['answer'],
 				operation: ['generate'],
-			},
-		},
-		routing: {
-			request: {
-				body: {
-					temperature: '={{$value}}',
-				},
 			},
 		},
 	},
@@ -227,13 +169,6 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 				operation: ['generate'],
 			},
 		},
-		routing: {
-			request: {
-				body: {
-					header_prompt: '={{$value}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Footer Prompt',
@@ -244,13 +179,6 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['answer'],
 				operation: ['generate'],
-			},
-		},
-		routing: {
-			request: {
-				body: {
-					footer_prompt: '={{$value}}',
-				},
 			},
 		},
 	},
@@ -298,12 +226,5 @@ export const answerOperations: INodeTypeDescription['properties'] = [
 				],
 			},
 		],
-		routing: {
-			request: {
-				body: {
-					chat_history: '={{$value && $value.message && $value.message.length > 0 ? $value.message.map(msg => ({role: msg.role, content: msg.content})) : []}}',
-				},
-			},
-		},
 	},
 ];

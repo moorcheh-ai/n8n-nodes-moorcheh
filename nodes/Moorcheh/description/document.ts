@@ -45,12 +45,6 @@ export const documentOperations: INodeTypeDescription['properties'] = [
 				operation: ['upload'],
 			},
 		},
-		routing: {
-			request: {
-				url: '={{"/namespaces/" + $value + "/documents"}}',
-				method: 'POST',
-			},
-		},
 	},
 	{
 		displayName: 'Documents',
@@ -98,13 +92,6 @@ export const documentOperations: INodeTypeDescription['properties'] = [
 				],
 			},
 		],
-		routing: {
-			request: {
-				body: {
-					documents: '={{$value && $value.document ? $value.document.map(doc => ({id: doc.id, text: doc.text, ...JSON.parse(doc.metadata || "{}")})) : []}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Namespace Name',
@@ -116,12 +103,6 @@ export const documentOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['document'],
 				operation: ['delete'],
-			},
-		},
-		routing: {
-			request: {
-				url: '={{"/namespaces/" + $value + "/documents/delete"}}',
-				method: 'POST',
 			},
 		},
 	},
@@ -138,13 +119,6 @@ export const documentOperations: INodeTypeDescription['properties'] = [
 			},
 		},
 		description: 'Comma-separated list of document IDs to delete',
-		routing: {
-			request: {
-				body: {
-					ids: '={{$value.split(",").map(id => id.trim())}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Namespace Name',
@@ -156,12 +130,6 @@ export const documentOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['document'],
 				operation: ['get'],
-			},
-		},
-		routing: {
-			request: {
-				url: '={{"/namespaces/" + $value + "/documents/get"}}',
-				method: 'POST',
 			},
 		},
 	},
@@ -178,12 +146,5 @@ export const documentOperations: INodeTypeDescription['properties'] = [
 			},
 		},
 		description: 'Comma-separated list of document IDs to retrieve',
-		routing: {
-			request: {
-				body: {
-					ids: '={{$value.split(",").map(id => id.trim())}}',
-				},
-			},
-		},
 	},
 ]; 

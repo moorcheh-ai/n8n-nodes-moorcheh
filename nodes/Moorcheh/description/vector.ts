@@ -39,12 +39,6 @@ export const vectorOperations: INodeTypeDescription['properties'] = [
 				operation: ['upload'],
 			},
 		},
-		routing: {
-			request: {
-				url: '={{"/namespaces/" + $value + "/vectors"}}',
-				method: 'POST',
-			},
-		},
 	},
 	{
 		displayName: 'Vectors',
@@ -90,13 +84,6 @@ export const vectorOperations: INodeTypeDescription['properties'] = [
 				],
 			},
 		],
-		routing: {
-			request: {
-				body: {
-					vectors: '={{$value && $value.vector ? $value.vector.map(vec => ({id: vec.id, vector: vec.vector.split(",").map(v => parseFloat(v.trim())), ...JSON.parse(vec.metadata || "{}")})) : []}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Namespace Name',
@@ -108,12 +95,6 @@ export const vectorOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['vector'],
 				operation: ['delete'],
-			},
-		},
-		routing: {
-			request: {
-				url: '={{"/namespaces/" + $value + "/vectors/delete"}}',
-				method: 'POST',
 			},
 		},
 	},
@@ -130,12 +111,5 @@ export const vectorOperations: INodeTypeDescription['properties'] = [
 			},
 		},
 		description: 'Comma-separated list of vector IDs to delete',
-		routing: {
-			request: {
-				body: {
-					ids: '={{$value.split(",").map(id => id.trim())}}',
-				},
-			},
-		},
 	},
 ]; 
