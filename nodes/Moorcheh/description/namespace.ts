@@ -45,15 +45,6 @@ export const namespaceOperations: INodeTypeDescription['properties'] = [
 				operation: ['create'],
 			},
 		},
-		routing: {
-			request: {
-				url: '/namespaces',
-				method: 'POST',
-				body: {
-					namespace_name: '={{$value}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Type',
@@ -77,13 +68,6 @@ export const namespaceOperations: INodeTypeDescription['properties'] = [
 				operation: ['create'],
 			},
 		},
-		routing: {
-			request: {
-				body: {
-					type: '={{$value}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Vector Dimension',
@@ -95,13 +79,6 @@ export const namespaceOperations: INodeTypeDescription['properties'] = [
 				resource: ['namespace'],
 				operation: ['create'],
 				type: ['vector'],
-			},
-		},
-		routing: {
-			request: {
-				body: {
-					vector_dimension: '={{$value}}',
-				},
 			},
 		},
 	},
@@ -134,12 +111,6 @@ export const namespaceOperations: INodeTypeDescription['properties'] = [
 				],
 			},
 		],
-		routing: {
-			request: {
-				url: '/namespaces',
-				method: 'GET',
-			},
-		},
 	},
 	{
 		displayName: 'Namespace Name',
@@ -151,12 +122,6 @@ export const namespaceOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['namespace'],
 				operation: ['delete'],
-			},
-		},
-		routing: {
-			request: {
-				url: '={{"/namespaces/" + $value}}',
-				method: 'DELETE',
 			},
 		},
 	},

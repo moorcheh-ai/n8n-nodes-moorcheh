@@ -34,15 +34,6 @@ export const searchOperations: INodeTypeDescription['properties'] = [
 			},
 		},
 		description: 'Text query or comma-separated vector values (e.g., 0.1,0.2,0.3). For vector search, ensure the dimension matches your namespace.',
-		routing: {
-			request: {
-				url: '/search',
-				method: 'POST',
-				body: {
-					query: '={{$value.includes(",") ? $value.split(",").map(v => parseFloat(v.trim())) : $value}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Namespaces',
@@ -57,13 +48,6 @@ export const searchOperations: INodeTypeDescription['properties'] = [
 			},
 		},
 		description: 'Comma-separated list of namespace names to search in',
-		routing: {
-			request: {
-				body: {
-					namespaces: '={{$value.split(",").map(ns => ns.trim())}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Top K',
@@ -74,13 +58,6 @@ export const searchOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['search'],
 				operation: ['search'],
-			},
-		},
-		routing: {
-			request: {
-				body: {
-					top_k: '={{$value}}',
-				},
 			},
 		},
 	},
@@ -96,13 +73,6 @@ export const searchOperations: INodeTypeDescription['properties'] = [
 				kioskMode: [true],
 			},
 		},
-		routing: {
-			request: {
-				body: {
-					threshold: '={{$value}}',
-				},
-			},
-		},
 	},
 	{
 		displayName: 'Kiosk Mode',
@@ -113,13 +83,6 @@ export const searchOperations: INodeTypeDescription['properties'] = [
 			show: {
 				resource: ['search'],
 				operation: ['search'],
-			},
-		},
-		routing: {
-			request: {
-				body: {
-					kiosk_mode: '={{$value}}',
-				},
 			},
 		},
 	},
