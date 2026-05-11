@@ -21,7 +21,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: https://registry.npmjs.org
+          # Do not set registry-url here: it injects token-based auth and breaks
+          # Trusted Publishing (OIDC). Default registry is registry.npmjs.org.
 
       - name: Install dependencies
         run: npm ci
@@ -31,6 +32,9 @@ jobs:
 
       - name: Lint package
         run: npm run lint -c .eslintrc.prepublish.js nodes credentials package.json
+
+      - name: Clear token-style npm auth (use OIDC only)
+        run: npm config delete //registry.npmjs.org/:_authToken 2>/dev/null || true
 
       - name: Publish with provenance
         run: npm publish --provenance --access public
