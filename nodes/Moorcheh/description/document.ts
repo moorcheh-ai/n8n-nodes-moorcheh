@@ -25,6 +25,12 @@ export const documentOperations: INodeTypeDescription['properties'] = [
 				action: 'Get documents from a namespace',
 			},
 			{
+				name: 'Fetch Text Data',
+				value: 'fetchTextData',
+				description: 'List text/summary chunks from a text-type namespace (max 100 per request)',
+				action: 'Fetch text data from a text namespace',
+			},
+			{
 				name: 'Delete',
 				value: 'delete',
 				description: 'Delete documents from a namespace',
@@ -147,4 +153,19 @@ export const documentOperations: INodeTypeDescription['properties'] = [
 		},
 		description: 'Comma-separated list of document IDs to retrieve',
 	},
-]; 
+	{
+		displayName: 'Namespace Name',
+		name: 'namespaceName',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['document'],
+				operation: ['fetchTextData'],
+			},
+		},
+		description:
+			'Text-type namespace only. Returns up to 100 text/summary chunks per request. Vector-only namespaces are not supported.',
+	},
+];

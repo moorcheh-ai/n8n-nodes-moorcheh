@@ -6,12 +6,12 @@
 	"resources": {
 		"credentialDocumentation": [
 			{
-				"url": "https://console.moorcheh.ai/docs"
+				"url": "https://docs.moorcheh.ai/guides/authentication"
 			}
 		],
 		"primaryDocumentation": [
 			{
-				"url": "https://console.moorcheh.ai/docs"
+				"url": "https://docs.moorcheh.ai/integrations/n8n/overview"
 			}
 		]
 	}

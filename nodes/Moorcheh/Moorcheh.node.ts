@@ -165,6 +165,12 @@ export class Moorcheh implements INodeType {
 						`/namespaces/${encodeURIComponent(namespaceName)}/documents/get`,
 						{ ids: csvToArray(documentIds) },
 					);
+				} else if (operation === 'fetchTextData') {
+					const namespaceName = this.getNodeParameter('namespaceName', i) as string;
+					responseData = await moorchehRequest(
+						'GET',
+						`/namespaces/${encodeURIComponent(namespaceName)}/documents/fetch-text-data`,
+					);
 				} else {
 					throw new NodeOperationError(
 						this.getNode(),

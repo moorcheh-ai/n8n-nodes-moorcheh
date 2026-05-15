@@ -22,33 +22,34 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 ## Operations
 
 ### Namespace Operations
-- **[Create](https://console.moorcheh.ai/docs/create-namespace/api-call)**: Create a new namespace for storing documents or vectors
-- **[List](https://console.moorcheh.ai/docs/list-namespaces/api-call)**: List all available namespaces
-- **[Delete](https://console.moorcheh.ai/docs/delete-namespace/api-call)**: Delete a namespace and all its contents
+- **[Create](https://docs.moorcheh.ai/api-reference/namespaces/create)**: Create a new namespace for storing documents or vectors
+- **[List](https://docs.moorcheh.ai/api-reference/namespaces/list)**: List all available namespaces
+- **[Delete](https://docs.moorcheh.ai/api-reference/namespaces/delete)**: Delete a namespace and all its contents
 
 ### Document Operations
-- **[Upload](https://console.moorcheh.ai/docs/upload-text-data/api-call)**: Upload documents to a namespace for semantic search
-- **[Get](https://console.moorcheh.ai/docs/get-documents/api-call)**: Retrieve specific documents by their IDs
-- **[Delete](https://console.moorcheh.ai/docs/delete-data/api-call)**: Delete documents from a namespace
+- **[Upload](https://docs.moorcheh.ai/api-reference/data/upload-text)**: Upload documents to a namespace for semantic search
+- **[Get](https://docs.moorcheh.ai/api-reference/data/get-documents)**: Retrieve specific documents by their IDs
+- **[Fetch Text Data](https://docs.moorcheh.ai/api-reference/data/fetch-text-data)**: List stored text and summary chunks from a **text-type** namespace (up to **100** items per request; vector-only namespaces are not supported)
+- **[Delete](https://docs.moorcheh.ai/api-reference/data/delete)**: Delete documents from a namespace
 
 ### Vector Operations
-- **[Upload](https://console.moorcheh.ai/docs/upload-vector-data/api-call)**: Upload vector embeddings to a namespace
-- **[Delete](https://console.moorcheh.ai/docs/delete-data/api-call)**: Delete vectors from a namespace
+- **[Upload](https://docs.moorcheh.ai/api-reference/data/upload-vector)**: Upload vector embeddings to a namespace
+- **[Delete](https://docs.moorcheh.ai/api-reference/data/delete)**: Delete vectors from a namespace
 
 ### Search Operations
-- **[Search](https://console.moorcheh.ai/docs/search/api-call)**: Perform semantic search across namespaces using text queries or vector embeddings
+- **[Search](https://docs.moorcheh.ai/api-reference/search/query)**: Perform semantic search across namespaces using text queries or vector embeddings
 
 ### Answer Operations
-- **[Generate](https://console.moorcheh.ai/docs/gen-ai-answer/api-call)**: Generate AI-powered answers based on namespace content using various LLM models
+- **[Generate](https://docs.moorcheh.ai/api-reference/ai/generate)**: Generate AI-powered answers based on namespace content using various LLM models
 
 ## Credentials
 
 To use this node, you need a Moorcheh API key:
 
-1. Sign up for a Moorcheh account at [console.moorcheh.ai](https://console.moorcheh.ai)
-2. Navigate to your API settings
+1. Sign up for a Moorcheh account (see [Quickstart](https://docs.moorcheh.ai/quickstart) on [docs.moorcheh.ai](https://docs.moorcheh.ai))
+2. Navigate to your API settings in the Moorcheh console
 3. Generate an API key
-4. Use the API key in the Moorcheh credentials in n8n
+4. Use the API key in the Moorcheh credentials in n8n ([Authentication](https://docs.moorcheh.ai/guides/authentication))
 
 ## Compatibility
 
@@ -70,6 +71,13 @@ To use this node, you need a Moorcheh API key:
 3. Enter the namespace name
 4. Add documents with ID, text content, and optional metadata
 
+### Fetching text chunks (batch)
+1. Select the "Document" resource
+2. Choose **Fetch Text Data**
+3. Enter the **text-type** namespace name
+
+The API returns `items` (max 100), `statistics`, and metadata suited for display, export, or RAG. Authenticate with your Moorcheh API key (same as other operations).
+
 ### Searching Content
 1. Select the "Search" resource
 2. Choose "Search" operation
@@ -87,5 +95,6 @@ To use this node, you need a Moorcheh API key:
 ## Resources
 
 * [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-* [Moorcheh API Documentation](https://console.moorcheh.ai/docs)
-* [Moorcheh Console](https://console.moorcheh.ai)
+* [Moorcheh Documentation](https://docs.moorcheh.ai) — API reference, guides, and [documentation index](https://docs.moorcheh.ai/llms.txt)
+* [Moorcheh n8n integration](https://docs.moorcheh.ai/integrations/n8n/overview)
+* [Moorcheh Console](https://console.moorcheh.ai) — account and API keys
