@@ -8,7 +8,7 @@ import {
 export class MoorchehApi implements ICredentialType {
 	name = 'moorchehApi';
 	displayName = 'Moorcheh API';
-	documentationUrl = 'https://console.moorcheh.ai/docs';
+	documentationUrl = 'https://docs.moorcheh.ai/guides/authentication';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API Key',
